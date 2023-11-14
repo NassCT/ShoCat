@@ -14,7 +14,7 @@
 
     <div id="chat-container">
         <div id="mode-toggle-container">
-            <button id="mode-toggle" onclick="toggleMode()">
+            <button id="mode-toggle">
                 <img id="moon-icon" src="img/moon.svg" alt="Moon Icon">
                 <img id="sun-icon" src="img/sun.svg" alt="Sun Icon">
             </button>
@@ -25,10 +25,10 @@
         <button onclick="sendMessage()">Send</button>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/darkmode.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
 </body>
 
 </html>

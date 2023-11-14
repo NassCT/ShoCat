@@ -6,21 +6,22 @@ function toggleMode() {
   // Ajouter ou supprimer la classe spécifique pour l'animation de bot-message en mode nuit
   $(".bot-message").toggleClass("bot-message-night", $("body").hasClass("night-mode"));
 
-  // Sauvegarder le mode nuit dans le stockage local
-  var nightMode = $("body").hasClass("night-mode") ? "enabled" : "disabled";
-  localStorage.setItem("nightMode", nightMode);
+  // Mettre à jour la variable globale et sauvegarder dans le stockage local
+  nightModeEnabled = $("body").hasClass("night-mode");
+  localStorage.setItem("nightMode", nightModeEnabled ? "enabled" : "disabled");
 }
 
 // Gérer le clic sur le bouton de mode jour/nuit
-$("#mode-toggle").click(function() {
-  $("#sun-icon, #moon-icon").toggle();
-  toggleMode();
-});
-
-// Appliquer le mode nuit lors du chargement de la page
 $(document).ready(function() {
-  var nightMode = localStorage.getItem("nightMode");
-  if (nightMode === "enabled") {
+  $("#mode-toggle").click(function() {
+    $("#sun-icon, #moon-icon").toggle();
+    toggleMode();
+  });
+
+  // Appliquer le mode nuit lors du chargement de la page
+  var storedNightMode = localStorage.getItem("nightMode");
+  nightModeEnabled = storedNightMode === "enabled";
+  if (nightModeEnabled) {
     toggleMode();
   }
 });

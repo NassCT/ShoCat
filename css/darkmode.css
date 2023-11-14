@@ -25,7 +25,6 @@ body.night-mode .bot-message {
 }
 
 /* Styles spécifiques aux icônes en mode nuit */
-
 body.night-mode #moon-icon {
   display: none;
 }
