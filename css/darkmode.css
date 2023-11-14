@@ -1,0 +1,49 @@
+/* Styles spécifiques au mode nuit */
+body.night-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+body.night-mode #chat-container {
+  background-color: #333;
+  color: #fff;
+}
+
+body.night-mode .bot-message-night {
+  animation-name: slideInUp;
+  background-color: #444;
+  color: #fff;
+}
+
+body.night-mode .user-message {
+  background-color: #32404b;
+}
+
+body.night-mode .bot-message {
+  background-color: #292929;
+  color: #fff;
+}
+
+/* Styles spécifiques aux icônes en mode nuit */
+
+body.night-mode #moon-icon {
+  display: none;
+}
+
+body.night-mode #sun-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+}
+
+body:not(.night-mode) #sun-icon {
+  display: none;
+}
+
+body:not(.night-mode) #moon-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #000;
+}
