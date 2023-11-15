@@ -25,22 +25,62 @@ function sendBotMessage(message) {
     });
   }
   
-  // Fonction pour traiter la question de l'utilisateur et renvoyer une réponse du bot
-  function processUserQuestion(userQuestion) {
-    var lowerCaseQuestion = userQuestion.toLowerCase();
-  
-    if (lowerCaseQuestion.includes("hello") || lowerCaseQuestion.includes("hi")) {
-      return "Salut !";
-    } else if (lowerCaseQuestion.includes("how are you")) {
-      return "Je vais bien, merci !";
-    } else if (lowerCaseQuestion.includes("your name")) {
-      return "Je suis Shobot, votre chatbot amical !";
-    } else {
-      // Appeler getRandomResponse en cas de question non reconnue
-      getRandomResponse();
-      return; // Ne pas envoyer de réponse immédiatement, car la réponse aléatoire sera envoyée par AJAX
-    }
+// Fonction pour traiter la question de l'utilisateur et renvoyer une réponse du bot
+function processUserQuestion(userQuestion) {
+  var lowerCaseQuestion = userQuestion.toLowerCase();
+
+  if (
+    lowerCaseQuestion.includes("salut") ||
+    lowerCaseQuestion.includes("bonjour") ||
+    lowerCaseQuestion.includes("coucou")
+  ) {
+    return "Salut !";
+  } else if (lowerCaseQuestion.includes("comment ça va")) {
+    return "Je vais bien, merci !";
+  } else if (
+    lowerCaseQuestion.includes("ton nom") ||
+    lowerCaseQuestion.includes("qui es-tu")
+  ) {
+    return "Je suis Shobot, votre chatbot amical !";
+  } else if (
+    lowerCaseQuestion.includes("quoi de neuf") ||
+    lowerCaseQuestion.includes("ça roule") ||
+    lowerCaseQuestion.includes("comment ça marche")
+  ) {
+    return "Pas grand-chose, mais je suis prêt à vous aider !";
+  } else if (
+    lowerCaseQuestion.includes("ça va bien") ||
+    lowerCaseQuestion.includes("comment tu vas")
+  ) {
+    return "Je vais bien, merci de demander ! Et vous ?";
+  } else if (
+    lowerCaseQuestion.includes("hé") ||
+    lowerCaseQuestion.includes("yo") ||
+    lowerCaseQuestion.includes("ça gaze")
+  ) {
+    return "Hey ! Comment ça se passe ?";
+  } else if (
+    lowerCaseQuestion.includes("quoi de beau") ||
+    lowerCaseQuestion.includes("comment ça se passe")
+  ) {
+    return "Rien de particulier, mais je suis prêt à discuter !";
+  } else if (
+    lowerCaseQuestion.includes("ça va") ||
+    lowerCaseQuestion.includes("tu vas bien")
+  ) {
+    return "Oui, ça va bien. Et vous ?";
+  } else if (
+    lowerCaseQuestion.includes("bonsoir") ||
+    lowerCaseQuestion.includes("salutations")
+  ) {
+    return "Bonsoir ! Comment puis-je vous aider ?";
+  } else {
+    // Appeler getRandomResponse en cas de question non reconnue
+    getRandomResponse();
+    return; // Ne pas envoyer de réponse immédiatement, car la réponse aléatoire sera envoyée par AJAX
   }
+}
+
   
   // Fonction pour envoyer un message de l'utilisateur
   function sendMessage() {
