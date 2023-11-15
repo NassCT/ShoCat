@@ -9,6 +9,10 @@ body.night-mode #chat-container {
   color: #fff;
 }
 
+body.night-mode #title-container h1{
+  color: #fff; /* Couleur du texte */
+}
+
 body.night-mode .bot-message-night {
   animation-name: slideInUp;
   background-color: #444;

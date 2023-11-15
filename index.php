@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div id="title-container">
+        <h1>Shobot IA</h1>
+    </div>
 
     <div id="chat-container">
         <div id="mode-toggle-container">
@@ -29,6 +32,3 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/darkmode.js"></script>
-</body>
-
-</html>
