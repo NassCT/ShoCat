@@ -1,5 +1,5 @@
 <?php
-include('includes/db.php');
+include('assets/includes/db.php');
 
 // Sélectionner une réponse aléatoire depuis la base de données
 $sql = "SELECT response FROM random_responses ORDER BY RAND() LIMIT 1";

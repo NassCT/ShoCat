@@ -1,5 +1,5 @@
 <?php
-include("includes/db.php");
+include("assets/ncludes/db.php");
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
